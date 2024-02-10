@@ -1,0 +1,140 @@
+.nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* gap: 20%; */
+    padding: 2rem;
+    font-size: 1.4rem;
+    font-weight: 700;
+    position: relative;
+}
+.logo{
+    width: 10%;
+    padding: 2rem;
+    color: gold;
+    font-size: 1.8rem;
+    font-weight: 700;
+}
+.nav__list{
+    width: 60%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.menu__background{
+    position: fixed;
+    visibility: hidden;
+    opacity: 0;
+    top: 3rem;
+    right: 3rem;
+    height: 5rem;
+    width: 5rem;
+    border-radius: 50%;
+    background-image: radial-gradient(rgba(56, 56, 54, 0.70), rgba(10, 9, 8, 0.70));
+    z-index: 1;
+    transition: all .5s;
+
+}
+.memu_icon{
+    width: 3rem;
+    height: 3rem; 
+    display: none;
+    position: fixed;
+    cursor: pointer;
+    z-index: 5;
+ }
+ .lines{
+    width: 100%;
+    border: .2rem solid white;
+    opacity: 1;
+    transition: all .5s;
+ }
+ .memu_icon>:not(:last-child){
+    margin-bottom: 1rem;
+ }
+ .memu_icon> .line1{
+    border: .2rem solid gold;
+    transform: rotate(45deg) translate(19%, 1.35rem);
+ }
+ .memu_icon> .line2{
+    opacity: 0;
+    visibility: hidden;
+ }
+ .memu_icon> .line3{
+    border: .2rem solid gold;
+    transform: rotate(-45deg) translate(19%, -1.35rem);
+ }
+ 
+ 
+.nav__items{
+    width: fit-content;
+    list-style: none;
+}
+.nav__links:link,
+.nav__links:visited{
+    text-decoration: none;
+    color: white;
+    display: block;
+    padding: .5rem 1rem;
+    width: fit-content;
+    border-radius: 1rem;
+    transition: all .5s;
+}
+
+.nav__links:hover{
+    background-color: gold;
+    color: var(--backgroundColor-dark);
+    
+    box-shadow: 0 1rem 3rem rgb(124, 122, 122);
+    transform: translateY(-.3rem) scale(1.1);
+}
+.nav__links:active{
+    transform: translateY(-.1rem);
+    box-shadow: 0 1rem 1rem rgb(59, 59, 59);
+}
+
+
+
+/* Media Query */
+
+@media screen and (max-width: 900px){
+    .nav{
+        gap: 15%;
+    }
+    .logo{
+        min-width: 10%;
+    }
+    .nav__list{
+        min-width: 70%;
+    }
+    
+}
+@media screen and (max-width: 650px){
+    .memu_icon{
+        display: block;
+        top: 4rem;
+        right: 4rem;
+        z-index: 99;
+     }
+     .nav__list{
+        visibility: hidden;
+        opacity: 0;
+        position: fixed;
+        width: 10%;
+        height: 10vh;
+        top: 0;
+        right: 0;
+        flex-wrap: wrap;
+        align-content: center;
+        justify-content: center;
+        gap: 2rem;
+        z-index: 5;
+        transition: all .5s .1s;
+    }
+    .nav__items{
+        min-width: 50%;
+        padding: 0 25%;
+        font-size: 2rem;
+    }
+     
+}
