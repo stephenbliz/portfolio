@@ -1,0 +1,22 @@
+.hero__section{
+    position: relative;
+    height: 85vh;
+    margin-top: 15vh;
+    background-image: linear-gradient(to right bottom, rgba(4, 3, 3, 0.85), rgba(25, 25, 25, 0.85)), url(../../assets/images/heroBackgroundDesktop.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.hero__wrp{
+    width: 70%;
+    border: .1rem solid var(--color-gold);
+    padding: 2rem;
+    border-radius: 1rem;
+    text-align: center;
+    font-size: 3rem;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+}

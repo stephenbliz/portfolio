@@ -15,6 +15,7 @@ const Header = () => {
         height: width ?  '100vh': '',
         opacity: width ?  '1' : '',
         visibility: width ?  'visible' : '',
+        zIndex: width ? '89' : ''
     }
     const backStyle = {
         opacity: width ?  '1' : '',
