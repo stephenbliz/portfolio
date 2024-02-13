@@ -1,6 +1,3 @@
-// import Name from '../name/Name';
-// import Name from '../name/Name';
-
 import style from './hero.module.css';
 
 const Hero = () => {
