@@ -2,21 +2,45 @@
     position: relative;
     height: 85vh;
     margin-top: 15vh;
+    z-index: -1;
     background-image: linear-gradient(to right bottom, rgba(4, 3, 3, 0.85), rgba(25, 25, 25, 0.85)), url(../../assets/images/heroBackgroundDesktop.jpg);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
 }
 .hero__wrp{
+    position: absolute;
     width: 70%;
     border: .1rem solid var(--color-gold);
     padding: 2rem;
     border-radius: 1rem;
     text-align: center;
     font-size: 3rem;
-    position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    z-index: 2;
+}
+.name__wrp{
+    background-image: linear-gradient(to right bottom, rgb(252, 115, 138), gold, rgb(145, 145, 240), orange );
+    display: inline-block;
+    background-clip: text;
+    color: transparent;
+}
+
+@media screen and (max-width: 960px){
+    .hero__section{
+        background-image: linear-gradient(to right bottom, rgba(4, 3, 3, 0.85), rgba(25, 25, 25, 0.85)), url(../../assets/images/heroBackgroundTablet.jpg);
+    }
+}
+
+@media screen and (max-width: 480px){
+    .hero__section{
+        background-image: linear-gradient(to right bottom, rgba(4, 3, 3, 0.85), rgba(25, 25, 25, 0.85)), url(../../assets/images/heroBackgroundMobile.jpg);
+    }
+}
+
+@media screen and (max-width: 318px){
+    .hero__wrp{
+        width: 90%;
+    }
 }

@@ -2,7 +2,7 @@ import { useState } from 'react';
 import style from './header.module.css';
 
 const Header = () => {
-    const [isMenuclick, setIsMenuclick] = useState(false);
+    const [isMenuclick, setIsMenuclick] = useState(true);
 
     const handleMenuclick = () => {
         setIsMenuclick(!isMenuclick)
@@ -15,7 +15,6 @@ const Header = () => {
         height: width ?  '100vh': '',
         opacity: width ?  '1' : '',
         visibility: width ?  'visible' : '',
-        zIndex: width ? '89' : ''
     }
     const backStyle = {
         opacity: width ?  '1' : '',
@@ -38,9 +37,9 @@ const Header = () => {
                     <li className={style.nav__items}><a href="" className={style.nav__links}>Blog</a></li>
                 </ul>
                 <div className={style.memu_icon} onClick={handleMenuclick}>
-                    <div className={`${style.lines} ${!isMenuclick && style.line1}`}></div>
-                    <div className={`${style.lines} ${!isMenuclick && style.line2}`}></div>
-                    <div className={`${style.lines} ${!isMenuclick && style.line3}`}></div>
+                    <div className={`${style.lines} ${!isMenuclick ? style.line1 : ''}`}></div>
+                    <div className={`${style.lines} ${!isMenuclick ? style.line2 : ''}`}></div>
+                    <div className={`${style.lines} ${!isMenuclick ? style.line3 : ''}`}></div>
                 </div>
             </nav>
         </header>

@@ -33,7 +33,7 @@
     height: 5rem;
     width: 5rem;
     border-radius: 50%;
-    background-image: radial-gradient(rgba(56, 56, 54, 0.70), rgba(10, 9, 8, 0.70));
+    background-image: radial-gradient(rgba(56, 56, 54, 0.95), rgba(10, 9, 8, 0.95));
     z-index: 1;
     transition: all .5s;
 
@@ -131,7 +131,7 @@
         align-content: center;
         justify-content: center;
         gap: 2rem;
-        /* z-index: 89; */
+        z-index: 99;
         transition: all .5s .1s;
     }
     .nav__items{
