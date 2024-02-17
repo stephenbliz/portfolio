@@ -20,6 +20,7 @@ html{
 body{
   font-family: 'Poppins', sans-serif;
   line-height: 1.7;
+  font-size: 1.4rem;
   background-image: radial-gradient( var(--backgroundColor-light), var(--backgroundColor-dark) );
   background-repeat: no-repeat;
   color: white;
@@ -36,5 +37,12 @@ body::-webkit-scrollbar{
   text-align: center;
   background-clip: text;
   color: transparent;
+  transition: all .5s;
+  /* position: relative;
+  z-index: -1; */
+}
+.heading__primary:hover{
+  transform: scale(1.2) skew(5deg, 6deg);
+  text-shadow: 0 1rem 3rem rgba(79, 78, 78, 0.883);
 }
 

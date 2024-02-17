@@ -9,7 +9,7 @@ const About = () => {
             <div className={style.about__container}>
                 <div className={style.about__des}>
                     <p>
-                        Hi, I am Ebuka Stephen Uzoma, a web development enthusiast.
+                        Hi, I am <strong>Ebuka Stephen Uzoma</strong>, a web development enthusiast.
                         The web is a wide and fast evolving space, I prioritize constant
                         learning to stay on top of the game.
                     </p>

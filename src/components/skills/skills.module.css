@@ -1,0 +1,28 @@
+.skills__section{
+    padding: 0 5rem;
+}
+.skills_h1{
+    margin-bottom: 5rem;
+}
+.skills__section> p{
+    margin-bottom: 3rem;
+}
+.skill__wrapper{
+    display: flex;
+    gap: 5%;
+    flex-wrap: wrap;
+}
+.skill{
+    width: 30%;
+    margin-bottom: 2rem;
+    text-align: center;
+}
+.skill__icon{
+    height: 7rem;
+    width: 7rem;
+}
+@media screen and (max-width: 480px){
+    .skill{
+        width: 45%;
+    }
+}
