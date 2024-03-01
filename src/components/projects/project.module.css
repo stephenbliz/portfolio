@@ -33,7 +33,7 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(7, 7, 7, 0.5);
+    background-color: rgba(7, 7, 7, 0.3);
 }
 .project__image{
     width: 100%;
@@ -44,7 +44,6 @@
     backface-visibility: hidden;
     width: 100%;
     height: 100%;
-    background-color: aqua;
     padding: 2rem;
     color: rgb(33, 33, 33);
     border-radius: 1rem;
@@ -63,7 +62,7 @@
     
 }
 .project_desc{
-    margin-bottom: 1rem;
+    margin-bottom: 2rem;
 }
 .project__link:link,
 .project__link:visited{
@@ -86,3 +85,80 @@
     transform: scale(.8);
     box-shadow: 0 .5rem 1rem var(--backgroundColor-light);
 }
+
+@media screen and (pointer: coarse){
+    .project__wrapper{
+        position: unset;
+    }
+    .project__front{
+        position: unset;
+        border-radius: 1rem 1rem 0 0;
+        transition: unset;
+    }
+    .project__back{
+        position: unset;
+        height: fit-content;
+        box-shadow: 0 1rem 2rem rgba(122, 120, 120, 0.5);
+        border-radius: 0 0 1rem 1rem;
+        transform: rotateY(0);
+        transition: unset;
+    }
+    .project__wrapper:hover .project__front{
+        transform: rotateY(0);
+    }
+
+}
+
+@media screen and (max-width: 1090px){
+    .project__container{
+        gap: 10%;
+    }
+    .project__wrapper{
+        width: 45%;
+    }
+}
+
+@media screen and (max-width: 963px){
+    .project__wrapper{
+        width: 60%;
+    }
+}
+
+@media screen and (max-width: 775px){
+    .project__wrapper{
+        width: 80%;
+    }
+}
+
+@media screen and (max-width: 602px){
+    .project__wrapper{
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 493px){
+    .project__wrapper{
+        position: unset;
+    }
+    .project__front{
+        position: unset;
+        border-radius: 1rem 1rem 0 0;
+        transition: unset;
+    }
+    .project__back{
+        position: unset;
+        height: fit-content;
+        box-shadow: 0 1rem 2rem rgba(122, 120, 120, 0.5);
+        border-radius: 0 0 1rem 1rem;
+        transform: rotateY(0);
+        transition: unset;
+    }
+    .project__wrapper:hover .project__front{
+        transform: rotateY(0);
+    }
+    .project__wrapper:hover .project__back{
+        transform: rotateY(0);
+       }
+
+}
+
