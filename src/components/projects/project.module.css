@@ -23,7 +23,7 @@
     height: 100%;
     border-radius: 1rem;
     overflow: hidden;
-    box-shadow: 0 1rem 2rem rgba(122, 120, 120, 0.5);
+    box-shadow: .5rem .5rem 1rem rgba(70, 70, 68, 0.7);
     transition: all .5s;
 }
 .project__front::after{
@@ -33,7 +33,7 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(7, 7, 7, 0.3);
+    background-color: rgba(7, 7, 7, 0.5);
 }
 .project__image{
     width: 100%;
@@ -98,7 +98,7 @@
     .project__back{
         position: unset;
         height: fit-content;
-        box-shadow: 0 1rem 2rem rgba(122, 120, 120, 0.5);
+        box-shadow: .5rem .5rem 1rem rgba(70, 70, 68, 0.7);
         border-radius: 0 0 1rem 1rem;
         transform: rotateY(0);
         transition: unset;
@@ -148,7 +148,7 @@
     .project__back{
         position: unset;
         height: fit-content;
-        box-shadow: 0 1rem 2rem rgba(122, 120, 120, 0.5);
+        box-shadow: .5rem .5rem 1rem rgba(70, 70, 68, 0.7);
         border-radius: 0 0 1rem 1rem;
         transform: rotateY(0);
         transition: unset;

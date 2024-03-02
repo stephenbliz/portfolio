@@ -78,7 +78,7 @@
 .nav__links:link,
 .nav__links:visited{
     text-decoration: none;
-    color: white;
+    color: inherit;
     display: block;
     padding: .5rem 1rem;
     width: fit-content;
