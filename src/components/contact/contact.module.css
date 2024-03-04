@@ -137,3 +137,32 @@
     transform: scale(.8);
     box-shadow: .5rem .5rem 1rem var(--backgroundColor-light);
 }
+
+
+@media screen and (max-width: 963px){
+    .contact__container{
+        flex-wrap: wrap;
+    }
+    .contact__desc_wrapper{
+        width: 60%;
+        margin-bottom: 5rem;
+    }
+    .contact__form{
+        width: 70%;
+    }
+}
+
+@media screen and (max-width: 590px){
+    .contact__desc_wrapper{
+        width: 100%;
+    }
+    .contact__form{
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 343px){
+    .email{
+        word-wrap: break-word;
+    }
+}
