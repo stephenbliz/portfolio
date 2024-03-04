@@ -35,11 +35,11 @@ const Contact = () => {
                     </div>
                 </div>
                 <form className={style.contact__form}>
-                    <h4 className={style.contact__form_h2}>Send us a message</h4>
+                    <h3 className={style.contact__form_h2}>Send us a message</h3>
                     <div className={style.form__group}>
                         <input 
                             type="text" 
-                            className={style.form__input}
+                            className={`${style.form__input} ${style.input}`}
                             placeholder='Full name' 
                             required
                             id='name'
@@ -53,7 +53,7 @@ const Contact = () => {
                     <div className={style.form__group}>
                         <input 
                             type="email" 
-                            className={style.form__input}
+                            className={`${style.form__input} ${style.input}`}
                             placeholder='Email address' 
                             required
                             id='email'
@@ -67,7 +67,7 @@ const Contact = () => {
                     <div className={style.form__group}>
                         <input 
                             type="text" 
-                            className={style.form__input}
+                            className={`${style.form__input} ${style.input}`}
                             placeholder='Subject' 
                             required
                             id='subject'
@@ -77,19 +77,21 @@ const Contact = () => {
                         />
 
                         <label htmlFor="subject" className={style.form__label}>Subject</label>
-
-                        <h3 className={style.form__mailDetails_h3}>
-                            Tell us more about your project
-                        </h3>
-
-                        <textarea 
-                            type="text" 
-                            className={style.form__mailDetails}
-                            value={contact.details} 
-                            name='details'
-                            onChange={(e)=> handleChange(e)}
-                        />
                     </div>
+
+                    <h5 className={style.form__mailDetails_h3}>
+                        Tell us more about your project
+                    </h5>
+
+                    <textarea 
+                        type="text" 
+                        className={`${style.form__input} ${style.form__mailDetails}`}
+                        value={contact.details} 
+                        name='details'
+                        onChange={(e)=> handleChange(e)}
+                    />
+                    <button className={style.form__button} type='submit'>Send message</button>
+                    
                 </form>
             </div>
         </section>
