@@ -19,7 +19,7 @@ const Project = () => {
     ];
 
     return (
-        <section className={`${style.section__project} section__margin`}>
+        <section className={`${style.section__project} section__margin`} id='project'>
             <h1 className={`${style.project__h1} heading__primary`}>Projects</h1>
             <div className={style.project__container}>
                 {projects.map(project =>(

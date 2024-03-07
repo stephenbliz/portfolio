@@ -24,6 +24,7 @@ body{
   background-image: radial-gradient( var(--backgroundColor-light), var(--backgroundColor-dark) );
   background-repeat: no-repeat;
   color: rgb(203, 201, 201);
+  scroll-behavior: smooth;
 }
 body::-webkit-scrollbar{
   width: 0;
@@ -38,11 +39,10 @@ body::-webkit-scrollbar{
   background-clip: text;
   color: transparent;
   transition: all .5s;
-  /* position: relative;
-  z-index: -1; */
 }
 .heading__primary:hover{
   transform: scale(1.2) skew(5deg, 6deg);
   text-shadow: 0 1rem 3rem rgba(79, 78, 78, 0.883);
 }
+
 

@@ -2,7 +2,7 @@ import style from './hero.module.css';
 
 const Hero = () => {
     return (
-        <section className={style.hero__section}>
+        <section className={style.hero__section} id='hero'>
            <div className={style.hero__wrp}>
             <p className={style.hero__para}>Hi, I am </p>
             <h1 className={style.name__wrp}>
