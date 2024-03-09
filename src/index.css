@@ -29,6 +29,10 @@ body{
 body::-webkit-scrollbar{
   width: 0;
 }
+.logo{
+  width: 12rem;
+  height: 4rem;
+}
 .section__margin{
   margin-top: 5rem;
 }
@@ -43,6 +47,13 @@ body::-webkit-scrollbar{
 .heading__primary:hover{
   transform: scale(1.2) skew(5deg, 6deg);
   text-shadow: 0 1rem 3rem rgba(79, 78, 78, 0.883);
+}
+
+@media screen and (max-width: 860px){
+  .logo{
+    width: 10rem;
+    height: 3.5rem;
+  }
 }
 
 

@@ -14,11 +14,8 @@
     z-index: 1500;
 }
 .logo{
-    width: 10%;
-    padding: 2rem;
-    color: var(--color-gold);
-    font-size: 1.8rem;
-    font-weight: 700;
+    width: 15%;
+    text-align: right;
 }
 .nav__list{
     width: 60%;
@@ -91,10 +88,10 @@
     color: var(--backgroundColor-dark);
     
     box-shadow: 0 .5rem 1.5rem rgba(92, 92, 92, 0.904);
-    transform: translateY(-.3rem) scale(1.1);
+    transform: translateY(-.3rem) scale(0.9);
 }
 .nav__links:active{
-    transform: translateY(-.1rem);
+    transform: translateY(-.1rem) scale(0.8);
     box-shadow: 0 .5rem .5rem rgb(59, 59, 59);
 }
 

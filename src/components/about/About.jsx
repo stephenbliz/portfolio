@@ -9,7 +9,7 @@ const About = () => {
             <div className={style.about__container}>
                 <div className={style.about__des}>
                     <p>
-                        Hi, I am <strong>Ebuka Stephen Uzoma</strong>, a web development enthusiast.
+                        <strong className={style.strong}>Hi, I am Ebuka Stephen Uzoma</strong>. <br /> I am a frontend developer.
                         The web is a wide and fast evolving space, I prioritize constant
                         learning to stay on top of the game.
                     </p>
@@ -26,7 +26,7 @@ const About = () => {
                         <img src={desktopPhoto} alt="A picture of me" className={style.photo}/>
                     </picture>
                     <figcaption className={style.photo__caption}>
-                        Ebuka Stephen Uzoma <span><em>web developer</em></span>
+                        Ebuka Stephen Uzoma <span><em>frontend developer</em></span>
                     </figcaption>
                 </figure>
             </div>

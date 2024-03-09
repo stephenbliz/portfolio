@@ -1,0 +1,48 @@
+.footer__section{
+    margin-top: 6rem;
+    padding: 2rem 5rem;
+    background-color: rgb(15, 13, 13);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+    align-items: center;
+}
+.footer_child{
+    width: fit-content;
+    padding: 0 1rem;
+}
+.icon__link:link,
+.icon__link:visited{
+    color: gray;
+    width: 2rem;
+    height: 2rem;
+}
+.linkedin__link:hover{
+    color: blue;
+    background-color: white;
+}
+.github__link:hover{
+    color: black;
+    background-color: white;
+}
+.social__icon_wrp{
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+}
+.icon{
+    width: 100%;
+    height: 100%;
+}
+
+@media screen and (max-width: 485px){
+    .footer__section{
+        margin-top: 6rem;
+        padding: 2rem 1rem;
+        
+    }
+    .copyright{
+        text-align: center;
+    }
+}

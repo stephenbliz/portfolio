@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import style from './header.module.css';
+import logo from '../../assets/images/logo.png';
 
 const Header = () => {
     const [isMenuclick, setIsMenuclick] = useState(true);
@@ -26,7 +27,7 @@ const Header = () => {
         <header>
             <nav className={style.nav}>
                 <div className={style.logo}>
-                    Logo
+                    <a href="#"><img src={logo} alt="logo" className="logo" /></a>
                 </div>
                 <div className={style.menu__background} style={backStyle}></div>
                 <ul className={`${style.nav__list}`} style={menuStyles}>
