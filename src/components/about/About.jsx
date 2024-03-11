@@ -3,6 +3,7 @@ import desktopPhoto from '../../assets/images/portfolioPhotoDesktop.jpg';
 import mobilePhoto from '../../assets/images/portfolioPhotoMobile.jpg';
 
 const About = () => {
+
     return (
         <section className={`${style.section__about} section__margin`} id='about'>
             <h1 className={`${style.about__h1} heading__primary`}>About me</h1>

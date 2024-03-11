@@ -1,6 +1,8 @@
 import { useState } from 'react';
 import style from './contact.module.css';
 import { LuMail } from "react-icons/lu";
+import {db} from '../../firebaseConfig';
+import { addDoc, collection } from 'firebase/firestore';
 
 const Contact = () => {
     const [contact, setContact] = useState({
@@ -15,6 +17,32 @@ const Contact = () => {
         const value = e.target.value;
         setContact({...contact, [name]: value});
     }
+
+    const handleSubmit = (e)=>{
+        e.preventDefault();
+        const message = {
+            name: contact.name,
+            email: contact.email,
+            subject: contact.subject,
+            details: contact.details
+        }
+        const colRef = collection(db, 'messages');
+
+        addDoc(colRef, message)
+            .then(()=>{
+            setContact({
+                name: '',
+                email: '',
+                subject: '',
+                details: ''
+            });
+            setTimeout(()=>{
+                alert('Message sent');
+            }, 2000)
+        })
+    }
+
+    
 
     return (
         <section className={`${style.contact__section} section_margin`} id='contact'>
@@ -34,7 +62,7 @@ const Contact = () => {
                         </a>
                     </div>
                 </div>
-                <form className={style.contact__form}>
+                <form className={style.contact__form} onSubmit={(e)=> handleSubmit(e)}>
                     <h3 className={style.contact__form_h2}>Send us a message</h3>
                     <div className={style.form__group}>
                         <input 
