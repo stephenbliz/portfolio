@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import style from './contact.module.css';
 import { LuMail } from "react-icons/lu";
+import { FaPhoneAlt } from "react-icons/fa";
 import {db} from '../../firebaseConfig';
 import { addDoc, collection } from 'firebase/firestore';
 
@@ -60,6 +61,10 @@ const Contact = () => {
                             <span className={style.mail_iconWrapper}><LuMail className={style.mailIcon}/></span> 
                             <span className={style.mail_text}>Mail me at <br /> <span className={style.email}>uzomaebuka11@gmail.com</span></span>
                         </a>
+                    </div>
+                    <div className={style.phoneWrapper}>
+                        <div><FaPhoneAlt className={style.phone_icon} /> Phone :</div>
+                        <a href="tel:+2349033852644" className={style.phone_number}>+2349033852644</a>
                     </div>
                 </div>
                 <form className={style.contact__form} onSubmit={(e)=> handleSubmit(e)}>

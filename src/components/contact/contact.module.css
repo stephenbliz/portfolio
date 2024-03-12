@@ -61,6 +61,25 @@
     color: rgba(202, 132, 3, 0.3);
     transition: all .5s;
 }
+.phoneWrapper{
+    margin-top: 2rem;
+    display: flex;
+    justify-content: left;
+    gap: 2rem;
+}
+.phone_icon{
+    color: rgba(202, 132, 3);
+}
+.phone_number:link,
+.phone_number:visited{
+    text-decoration: none;
+    color: rgba(202, 132, 3, 0.3);
+    transition: all .5s;
+}
+.phone_number:hover,
+.phone_number:active{
+    color: rgba(202, 132, 3);
+}
 
 .contact__form{
     width: 35%;
