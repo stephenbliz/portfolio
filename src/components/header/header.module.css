@@ -104,7 +104,7 @@
         gap: 15%;
     }
     .logo{
-        min-width: 10%;
+        width: 10%;
     }
     .nav__list{
         min-width: 70%;
@@ -114,8 +114,9 @@
 @media screen and (max-width: 650px){
     .memu_icon{
         display: block;
-        top: 4rem;
-        right: 4rem;
+        top: 5.5%;
+        transform: translateY(-5.5%);
+        right: 2.5rem;
         z-index: 99;
      }
      .nav__list{
@@ -140,3 +141,10 @@
     }
      
 }
+
+@media screen and (max-width: 350px) {
+    .memu_icon{
+        top: 5%;
+        transform: translateY(-5%);
+     }
+} 
