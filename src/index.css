@@ -18,12 +18,12 @@ html{
 }
 
 body{
-  font-family: 'Poppins', sans-serif;
-  line-height: 1.7;
-  font-size: 1.4rem;
-  background-image: radial-gradient( var(--backgroundColor-light), var(--backgroundColor-dark) );
+  font-family: 'Poppins', sans-serif!important;
+  line-height: 1.7!important;
+  font-size: 1.4rem!important;
+  background-image: radial-gradient( var(--backgroundColor-light), var(--backgroundColor-dark) )!important;
   background-repeat: no-repeat;
-  color: rgb(203, 201, 201);
+  color: rgb(203, 201, 201)!important;
   scroll-behavior: smooth;
 }
 body::-webkit-scrollbar{
@@ -38,7 +38,8 @@ body::-webkit-scrollbar{
 }
 .heading__primary{
   background-image: linear-gradient(to bottom right, var(--color-gold), gold);
-  font-size: 2.5rem;
+  font-size: 2.5rem!important;
+  font-weight: bold;
   text-align: center;
   background-clip: text;
   color: transparent;

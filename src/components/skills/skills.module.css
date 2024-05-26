@@ -9,6 +9,8 @@
 }
 .skill__wrapper{
     display: flex;
+    align-items: center;
+    justify-content: center;
     gap: 5%;
     flex-wrap: wrap;
 }
@@ -16,10 +18,12 @@
     width: 30%;
     margin-bottom: 2rem;
     text-align: center;
+    /* background-color: aqua; */
 }
 .skill__icon{
     height: 7rem;
     width: 7rem;
+    margin: auto;
 }
 @media screen and (max-width: 480px){
     .skill{

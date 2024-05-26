@@ -10,15 +10,19 @@ const About = () => {
             <div className={style.about__container}>
                 <div className={style.about__des}>
                     <p>
-                        <strong className={style.strong}>Hi, I am Ebuka Stephen Uzoma</strong>. <br /> I am a frontend developer.
-                        The web is a wide and fast evolving space, I prioritize constant
-                        learning to stay on top of the game.
+                        As a passionate frontend developer, I thrive on crafting visually 
+                        stunning and highly interactive web experiences. Equipped with a solid 
+                        foundation in JavaScript and TypeScript, I bring dynamic functionality 
+                        to life, while my expertise in React allows me to build robust, 
+                        user-friendly interfaces. My proficiency with modern styling tools like 
+                        Chakra UI and Tailwind CSS ensures that every project is not only 
+                        functional but also aesthetically pleasing.
                     </p>
-                    <p>
+                    {/* <p>
                         Giving quality services is one of my characteristics, from enhancing
                         user experience to increasing engagements. I am open to working with 
                         you and transform your vision into reality.
-                    </p>
+                    </p> */}
                 </div>
                 <figure className={style.photo__container}>
                     <picture className={style.photo__wrapper}>

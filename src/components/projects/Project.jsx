@@ -1,4 +1,5 @@
 import style from './project.module.css';
+import { Spinner } from '@chakra-ui/react'
 // import editor from '../../assets/images/text_editor.png';
 // import translator from '../../assets/images/live_translator.png';
 // import portnew from '../../assets/images/portnew.png';
@@ -22,9 +23,46 @@ const {data, error, loading} = useFetch(`${import.meta.env.VITE_DATABASE_URL}/ap
     //     {name: 'age calculator', desc: 'Users can calculate their age with the help of this web application by inputing the date, month and year of birth', image: ageCalculator, link: 'https://age-calculator-nine-eta.vercel.app', color: '#8951b7', id: 5},
     //     {name: 'live language translator', desc: 'This web application allow users to translate foreign languages to native language', image: translator, link: 'https://live-language-translator.vercel.app', color: '#6b6b8a', id: 6},
     // ];
-    if(loading) return <p>Fetching project...</p>
+    if(loading) {
+        return (
+            <section 
+                className={`${style.section__project} section__margin`} 
+                id='project'
+            >
+                <h1 className={`${style.project__h1} heading__primary`}>
+                    Projects
+                </h1>
+                <p>
+                    <Spinner
+                        thickness='4px'
+                        marginLeft='auto'
+                        marginRight='auto'
+                        display='block'
+                        speed='0.65s'
+                        emptyColor='gray.600'
+                        color='yellow.500'
+                        size='xl'
+                    />
+                </p>
+            </section>
+        )
+    }
 
-    if(error) return <p>Not found</p>
+    if(error) {
+        return (
+            <section 
+                className={`${style.section__project} section__margin`} 
+                id='project'
+            >
+                <h1 className={`${style.project__h1} heading__primary`}>
+                    Projects
+                </h1>
+                <p>
+                    {error.message}
+                </p>
+            </section>
+        )
+    }
 
     if(data && Array.isArray(data.data)){
         return (
@@ -75,7 +113,17 @@ const {data, error, loading} = useFetch(`${import.meta.env.VITE_DATABASE_URL}/ap
     }
 
     return (
-        <p>No projects available</p>
+        <section 
+            className={`${style.section__project} section__margin`} 
+            id='project'
+        >
+            <h1 className={`${style.project__h1} heading__primary`}>
+                Projects
+            </h1>
+            <p>
+                No project available
+            </p>
+        </section>
     )
 
     // return (

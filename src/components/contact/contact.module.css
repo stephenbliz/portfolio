@@ -62,13 +62,15 @@
     transition: all .5s;
 }
 .phoneWrapper{
-    margin-top: 2rem;
+    margin-top: 3rem;
     display: flex;
     justify-content: left;
+    align-items: center;
     gap: 2rem;
 }
 .phone_icon{
     color: rgba(202, 132, 3);
+    display: inline;
 }
 .phone_number:link,
 .phone_number:visited{
