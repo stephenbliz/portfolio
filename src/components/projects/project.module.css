@@ -59,7 +59,7 @@
 .project__name{
     text-transform: capitalize;
     margin-bottom: 1rem;
-    
+    font-weight: bold;
 }
 .project_desc{
     margin-bottom: 2rem;
