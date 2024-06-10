@@ -81,7 +81,7 @@ const {data, error, loading} = useFetch(`${import.meta.env.VITE_DATABASE_URL}/ap
                         >
                             <div className={style.project__front}>
                                 <img 
-                                    src={`${import.meta.env.VITE_DATABASE_URL}${project.attributes.image.data.attributes.url}`} 
+                                    src={`${project.attributes.image.data.attributes.url}`} 
                                     alt={project.attributes.image.data.attributes.alternativeText} 
                                     className={style.project__image} 
                                 />
