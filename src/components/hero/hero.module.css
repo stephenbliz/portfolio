@@ -1,6 +1,7 @@
 .hero__section{
-    position: relative;
-    height: 85vh;
+    /* position: relative; */
+    /* height: 70vh; */
+    padding: 10% 0;
     margin-top: 15vh;
     z-index: -1;
     background-image: linear-gradient(to right bottom, rgba(4, 3, 3, 0.85), rgba(25, 25, 25, 0.85)), url(../../assets/images/heroBackgroundDesktop.jpg);
@@ -9,16 +10,17 @@
     background-repeat: no-repeat;
 }
 .hero__wrp{
-    position: absolute;
+    /* position: absolute; */
     width: 70%;
     border: .1rem solid var(--color-gold);
     padding: 2rem;
     border-radius: 1rem;
     text-align: center;
     font-size: 3rem;
-    top: 50%;
+    margin: 0 auto 0 auto ;
+    /* top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%); */
 }
 .name__wrp{
     background-image: linear-gradient(to right bottom, rgb(252, 115, 138), gold, rgb(145, 145, 240), orange );

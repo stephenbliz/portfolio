@@ -43,6 +43,9 @@ const {data, error, loading} = useFetch(`${import.meta.env.VITE_DATABASE_URL}/ap
                         color='yellow.500'
                         size='xl'
                     />
+                    <p className={style.loading_message}>
+                        This may take about 53 seconds...
+                    </p>
                 </p>
             </section>
         )

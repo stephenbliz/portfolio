@@ -85,6 +85,9 @@
     transform: scale(.8);
     box-shadow: 0 .5rem 1rem var(--backgroundColor-light);
 }
+.loading_message{
+    text-align: center;
+}
 
 @media screen and (pointer: coarse){
     .project__wrapper{
