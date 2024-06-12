@@ -1,9 +1,28 @@
 import style from './skills.module.css';
+import {motion} from 'framer-motion';
 import { FaHtml5 } from "react-icons/fa";
 import { IoLogoCss3 } from "react-icons/io5";
 import { DiJavascript } from "react-icons/di";
 import { FaReact } from "react-icons/fa";
 import { IoLogoFirebase } from "react-icons/io5";
+
+const skillsVariants = {
+    hidden: {
+        opacity: 0,
+        y: 50
+    },
+    visible: {
+        opacity: 1,
+        y: 0,
+        transition: {
+            delay: 0.2,
+            duration: 1.5,
+            type: 'spring',
+            stiffness: 150,
+        },
+    },
+    
+}
 
 
 const Skills = () => {
@@ -25,10 +44,17 @@ const Skills = () => {
             </p>
             <div className={style.skill__wrapper}>
                 {skills.map(skill =>(
-                    <figure key={skill.id} className={style.skill}>
+                    <motion.figure 
+                        key={skill.id} 
+                        className={style.skill}
+                        variants={skillsVariants}
+                        initial='hidden'
+                        whileInView='visible'
+                        viewport={{once: true}}
+                    >
                         <div>{skill.icon}</div>
                         <figcaption className={style.icons__name}>{skill.name}</figcaption>
-                    </figure>
+                    </motion.figure>
                 ))}
             </div>
             

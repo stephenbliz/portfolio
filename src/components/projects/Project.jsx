@@ -1,5 +1,6 @@
 import style from './project.module.css';
 import { Spinner } from '@chakra-ui/react'
+import {motion} from 'framer-motion';
 import editor from '../../assets/images/text_editor.png';
 import translator from '../../assets/images/live_translator.png';
 import portnew from '../../assets/images/portnew.png';
@@ -7,6 +8,24 @@ import expense from '../../assets/images/expense_tracker.png';
 import bmi from '../../assets/images/bmi_calculator.png';
 import ageCalculator from '../../assets/images/age_calculator.png';
 import useFetch from '../hooks/useFetch';
+
+const projectVariants = {
+    hidden: {
+        opacity: 0,
+        y: 50
+    },
+    visible: {
+        opacity: 1,
+        y: 0,
+        transition: {
+            delay: 0.2,
+            duration: 1.5,
+            type: 'spring',
+            stiffness: 150,
+        },
+    },
+    
+}
 
 const Project = () => {
 
@@ -78,9 +97,13 @@ const {data, error, loading} = useFetch(`${import.meta.env.VITE_DATABASE_URL}/ap
                 </h1>
                 <div className={style.project__container}>
                     {data.data.map(project =>(
-                        <div 
+                        <motion.div 
                             className={style.project__wrapper} 
                             key={project.id}
+                            variants={projectVariants}
+                            initial='hidden'
+                            whileInView='visible'
+                            viewport={{once: true}}
                         >
                             <div className={style.project__front}>
                                 <img 
@@ -107,7 +130,7 @@ const {data, error, loading} = useFetch(`${import.meta.env.VITE_DATABASE_URL}/ap
                                 </a>
                                 
                             </div>
-                        </div>
+                        </motion.div>
                     ))}
                 </div>
                 

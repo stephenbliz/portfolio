@@ -3,6 +3,7 @@ import style from './contact.module.css';
 import { LuMail } from "react-icons/lu";
 import { FaPhoneAlt } from "react-icons/fa";
 import {db} from '../../firebaseConfig';
+import {motion} from 'framer-motion';
 import { addDoc, collection } from 'firebase/firestore';
 
 const Contact = () => {
@@ -49,7 +50,13 @@ const Contact = () => {
         <section className={`${style.contact__section} section_margin`} id='contact'>
             <h1 className={`${style.contact__h1} heading__primary`}>Contact me</h1>
             <div className={style.contact__container}>
-                <div className={style.contact__desc_wrapper}>
+                <motion.div 
+                    className={style.contact__desc_wrapper}
+                    initial={{opacity: 0, x: -100}}
+                    whileInView={{opacity: 1, x: 0}}
+                    transition={{duration: 2, delay: 0.5, type: 'spring', stiffness: 150}}
+                    viewport={{once: true}}
+                >
                     <h1 className={style.contact__intro}>
                         Let's chat. <br /> Tell me about your project.
                     </h1>
@@ -66,8 +73,15 @@ const Contact = () => {
                         <div><FaPhoneAlt className={style.phone_icon} /> Phone :</div>
                         <a href="tel:+2349033852644" className={style.phone_number}>+2349033852644</a>
                     </div>
-                </div>
-                <form className={style.contact__form} onSubmit={(e)=> handleSubmit(e)}>
+                </motion.div>
+                <motion.form 
+                    className={style.contact__form} 
+                    onSubmit={(e)=> handleSubmit(e)}
+                    initial={{opacity: 0, x: 200}}
+                    whileInView={{opacity: 1, x: 0}}
+                    transition={{duration: 2, delay: 0.5, type: 'spring', stiffness: 150}}
+                    viewport={{once: true}}
+                >
                     <h3 className={style.contact__form_h2}>Send us a message</h3>
                     <div className={style.form__group}>
                         <input 
@@ -125,7 +139,7 @@ const Contact = () => {
                     />
                     <button className={style.form__button} type='submit'>Send message</button>
                     
-                </form>
+                </motion.form>
             </div>
         </section>
     );

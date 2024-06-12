@@ -13,8 +13,8 @@ const About = () => {
                     className={style.about__des}
                     initial={{opacity: 0, x: -100}}
                     whileInView={{opacity: 1, x: 0}}
-                    transition={{duration: 1, delay: 0.2, type: 'spring', stiffness: 120}}
-                    // viewport={{once: true}}
+                    transition={{duration: 2, delay: 0.5, type: 'spring', stiffness: 150}}
+                    viewport={{once: true}}
                 >
                     <p>
                         As a passionate frontend developer, I thrive on crafting visually 
@@ -25,18 +25,13 @@ const About = () => {
                         Chakra UI and Tailwind CSS ensures that every project is not only 
                         functional but also aesthetically pleasing.
                     </p>
-                    {/* <p>
-                        Giving quality services is one of my characteristics, from enhancing
-                        user experience to increasing engagements. I am open to working with 
-                        you and transform your vision into reality.
-                    </p> */}
                 </motion.div>
                 <motion.figure 
                     className={style.photo__container}
                     initial={{opacity: 0, x: 200}}
                     whileInView={{opacity: 1, x: 0}}
-                    transition={{duration: 1, delay: 0.2, type: 'spring', stiffness: 120}}
-                    // viewport={{once: true}}
+                    transition={{duration: 2, delay: 0.5, type: 'spring', stiffness: 150}}
+                    viewport={{once: true}}
                 >
                     <picture className={style.photo__wrapper}>
                         <source srcSet={mobilePhoto} media="(max-width: 860px)" className={style.photo}/>
