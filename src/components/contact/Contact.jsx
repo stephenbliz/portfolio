@@ -52,8 +52,8 @@ const Contact = () => {
             <div className={style.contact__container}>
                 <motion.div 
                     className={style.contact__desc_wrapper}
-                    initial={{opacity: 0, x: -100}}
-                    whileInView={{opacity: 1, x: 0}}
+                    initial={{opacity: 0, y: 50}}
+                    whileInView={{opacity: 1, y: 0}}
                     transition={{duration: 2, delay: 0.5, type: 'spring', stiffness: 150}}
                     viewport={{once: true}}
                 >
@@ -77,8 +77,8 @@ const Contact = () => {
                 <motion.form 
                     className={style.contact__form} 
                     onSubmit={(e)=> handleSubmit(e)}
-                    initial={{opacity: 0, x: 200}}
-                    whileInView={{opacity: 1, x: 0}}
+                    initial={{opacity: 0, y: 50}}
+                    whileInView={{opacity: 1, y: 0}}
                     transition={{duration: 2, delay: 0.5, type: 'spring', stiffness: 150}}
                     viewport={{once: true}}
                 >

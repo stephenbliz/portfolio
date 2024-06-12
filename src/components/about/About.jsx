@@ -11,8 +11,8 @@ const About = () => {
             <div className={style.about__container}>
                 <motion.div 
                     className={style.about__des}
-                    initial={{opacity: 0, x: -100}}
-                    whileInView={{opacity: 1, x: 0}}
+                    initial={{opacity: 0, y: 50}}
+                    whileInView={{opacity: 1, y: 0}}
                     transition={{duration: 2, delay: 0.5, type: 'spring', stiffness: 150}}
                     viewport={{once: true}}
                 >
@@ -28,8 +28,8 @@ const About = () => {
                 </motion.div>
                 <motion.figure 
                     className={style.photo__container}
-                    initial={{opacity: 0, x: 200}}
-                    whileInView={{opacity: 1, x: 0}}
+                    initial={{opacity: 0, y: 50}}
+                    whileInView={{opacity: 1, y: 0}}
                     transition={{duration: 2, delay: 0.5, type: 'spring', stiffness: 150}}
                     viewport={{once: true}}
                 >
