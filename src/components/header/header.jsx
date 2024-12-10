@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { Link } from 'react-router-dom';
 import style from './header.module.css';
 import logo from '../../assets/images/logo.png';
 
@@ -35,11 +36,11 @@ const Header = () => {
                 </div>
                 <div className={style.menu__background} style={backStyle}></div>
                 <ul className={`${style.nav__list}`} style={menuStyles} onClick={()=>handleMenuclick()}>
-                    <li className={style.nav__items}><a href="#" className={style.nav__links}>Home</a></li>
-                    <li className={style.nav__items}><a href="#about" className={style.nav__links}>About</a></li>
-                    <li className={style.nav__items}><a href="#project" className={style.nav__links}>Projects</a></li>
-                    <li className={style.nav__items}><a href="#contact" className={style.nav__links}>Contact</a></li>
-                    <li className={style.nav__items}><a href="" className={style.nav__links}>Blog</a></li>
+                    <li className={style.nav__items}><Link to="/" className={style.nav__links}>Home</Link></li>
+                    <li className={style.nav__items}><Link to="/about" className={style.nav__links}>About</Link></li>
+                    <li className={style.nav__items}><Link to="/project" className={style.nav__links}>Projects</Link></li>
+                    <li className={style.nav__items}><Link to="/contact" className={style.nav__links}>Contact</Link></li>
+                    <li className={style.nav__items}><Link to="/blog" className={style.nav__links}>Blog</Link></li>
                 </ul>
                 <div className={style.memu_icon} onClick={handleMenuclick}>
                     <div className={`${style.lines} ${!isMenuclick ? style.line1 : ''}`}></div>
