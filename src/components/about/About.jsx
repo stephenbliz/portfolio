@@ -36,7 +36,7 @@ const About = () => {
                     <picture className={style.photo__wrapper}>
                         <source srcSet={mobilePhoto} media="(max-width: 860px)" className={style.photo}/>
                         <source srcSet={desktopPhoto} media="(min-width: 861px)" className={style.photo}/>
-                        <img src={desktopPhoto} alt="A picture of me" className={style.photo}/>
+                        <img src={desktopPhoto} alt="A picture of Ebuka Stephen Uzoma" className={style.photo}/>
                     </picture>
                     <figcaption className={style.photo__caption}>
                         Ebuka Stephen Uzoma <span><em>frontend developer</em></span>

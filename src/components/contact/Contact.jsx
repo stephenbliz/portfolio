@@ -2,9 +2,7 @@ import { useState } from 'react';
 import style from './contact.module.css';
 import { LuMail } from "react-icons/lu";
 import { FaPhoneAlt } from "react-icons/fa";
-import {db} from '../../firebaseConfig';
 import {motion} from 'framer-motion';
-import { addDoc, collection } from 'firebase/firestore';
 
 const Contact = () => {
     const [contact, setContact] = useState({
