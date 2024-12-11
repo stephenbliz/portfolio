@@ -19,3 +19,27 @@ export const getProjects = gql`
         }
     }
 `
+
+export const getPortfolioAuthor = gql`
+    query MyQuery($slug: String!) {
+        portfolioAuthor(where: {slug: $slug}) {
+            excerpt
+            description {
+            raw
+            }
+            facebook
+            linkedin
+            name
+            photo {
+            alt
+            url
+            id
+            fileName
+            }
+            slug
+            tiktok
+            title
+            twitter
+        }
+    }
+`

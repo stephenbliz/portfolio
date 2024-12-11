@@ -1,10 +1,11 @@
-import Skills from "../../components/skills/Skills";
+import Breadcrum from "../../components/breadcrum/breadcrum";
 
 const Blog = () => {
     return (
         <>
-        <Skills />
-        <div>My Blogs</div>
+            <Breadcrum
+                path='blog' 
+            />
         </>
     );
 }

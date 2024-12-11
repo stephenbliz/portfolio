@@ -2,8 +2,15 @@ import style from './about.module.css';
 import {motion} from 'framer-motion';
 import desktopPhoto from '../../assets/images/portfolioPhotoDesktop.jpg';
 import mobilePhoto from '../../assets/images/portfolioPhotoMobile.jpg';
+import { Link } from 'react-router-dom';
+import { FaArrowRightLong } from "react-icons/fa6";
+import { FaFacebookF } from "react-icons/fa";
+import { FaLinkedinIn } from "react-icons/fa6";
+import { FaXTwitter } from "react-icons/fa6";
+import { FaTiktok } from "react-icons/fa";
+// import { useQuery } from '@apollo/client';
 
-const About = () => {
+const About = ({showLink = true, description, showMedia = true}) => {
 
     return (
         <section className={`${style.section__about} section__margin`} id='about'>
@@ -17,14 +24,25 @@ const About = () => {
                     viewport={{once: true}}
                 >
                     <p>
-                        As a passionate frontend developer, I thrive on crafting visually 
-                        stunning and highly interactive web experiences. Equipped with a solid 
-                        foundation in JavaScript and TypeScript, I bring dynamic functionality 
-                        to life, while my expertise in React allows me to build robust, 
-                        user-friendly interfaces. My proficiency with modern styling tools like 
-                        Chakra UI and Tailwind CSS ensures that every project is not only 
-                        functional but also aesthetically pleasing.
+                        {description}
                     </p>
+                    {showLink && <button>
+                        <Link 
+                            to='/about-me'
+                            className={style.read_more}
+                        >
+                            <span>read more</span>
+                            <span><FaArrowRightLong /></span>
+                        </Link>
+                    </button>}
+                    {showMedia && <div
+                        className={style.media_wrp} 
+                    >
+                        <Link to='#'><FaFacebookF /></Link>
+                        <Link to='#'><FaLinkedinIn /></Link>
+                        <Link to='#'><FaXTwitter /></Link>
+                        <Link to='#'><FaTiktok /></Link> 
+                    </div>}
                 </motion.div>
                 <motion.figure 
                     className={style.photo__container}

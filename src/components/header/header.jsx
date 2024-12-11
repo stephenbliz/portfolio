@@ -37,7 +37,7 @@ const Header = () => {
                 <div className={style.menu__background} style={backStyle}></div>
                 <ul className={`${style.nav__list}`} style={menuStyles} onClick={()=>handleMenuclick()}>
                     <li className={style.nav__items}><Link to="/" className={style.nav__links}>Home</Link></li>
-                    <li className={style.nav__items}><Link to="/about" className={style.nav__links}>About</Link></li>
+                    <li className={style.nav__items}><Link to="/about-me" className={style.nav__links}>About</Link></li>
                     <li className={style.nav__items}><Link to="/project" className={style.nav__links}>Projects</Link></li>
                     <li className={style.nav__items}><Link to="/contact" className={style.nav__links}>Contact</Link></li>
                     <li className={style.nav__items}><Link to="/blog" className={style.nav__links}>Blog</Link></li>

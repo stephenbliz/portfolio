@@ -1,6 +1,14 @@
+import Breadcrum from "../../components/breadcrum/breadcrum";
+import Project from "../../components/projects/Project";
+
 const ProjectPage = () => {
     return (
-        <div>Project Page</div>
+        <>
+            <Breadcrum 
+                path='projects'
+            />
+            <Project />
+        </>
     );
 }
  
