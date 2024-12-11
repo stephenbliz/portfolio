@@ -6,7 +6,7 @@ import HomePage from "./pages/Home/home"
 
 import NotFound from "./pages/NotFound/notFound"
 import Blog from "./pages/Blog/blog"
-import ProjectDetail from "./pages/projectDetail/projectDetail"
+import ProjectDetail from "./pages/ProjectDetail/projectDetail"
 import ContactPage from "./pages/ContactPage/contactPage"
 import ProjectPage from "./pages/ProjectPage/projectPage"
 
