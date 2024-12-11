@@ -19,10 +19,11 @@ function App() {
         <Routes>
           <Route path="/" element={<HomePage />} />
           <Route path="/about" element={<AboutMe />} />
-          <Route path="/project-detail/:slug" element={<ProjectDetail/>} />
           <Route path="/blog" element={<Blog />} />
           <Route path="/contact" element={<ContactPage />} />
-          <Route path="/project" element={<ProjectPage />} />
+          <Route path="/project" element={<ProjectPage />} >
+            <Route path="/project/project-detail/:slug" element={<ProjectDetail/>} />
+          </Route>
           <Route path="*" element={<NotFound />} />
         </Routes>
       <Footer />
