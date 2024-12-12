@@ -64,6 +64,7 @@
 .photo__caption{
     position: relative;
     text-align: center;
+    text-transform: capitalize;
     font-size: 1.6rem;
     transition: all .5s;
     opacity: 0;
@@ -71,8 +72,7 @@
     z-index: -1;
 }
 .photo__caption> span{
-    display: block;
-    
+    display: block; 
 }
 
 @media screen and (pointer: coarse){

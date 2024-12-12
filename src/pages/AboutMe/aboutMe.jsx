@@ -1,9 +1,15 @@
 import About from "../../components/about/About";
 import Breadcrum from "../../components/breadcrum/breadcrum";
+import { useEffect } from "react";
 
 const AboutMe = () => {
-    const description = 'As a passionate frontend developer, I thrive on crafting visually stunning and highly interactive web experiences. Equipped with a solid foundation in JavaScript and TypeScript, I bring dynamic functionality to life, while my expertise in React allows me to build robust, user-friendly interfaces. My proficiency with modern styling tools like Chakra UI and Tailwind CSS ensures that every project is not only functional but also aesthetically pleasing.'
-
+    useEffect(()=>{
+        window.scrollTo({
+            top: '0',
+            behavior: 'smooth'
+        })
+    },[])
+    
     return (
         <>
             <Breadcrum 
@@ -11,7 +17,10 @@ const AboutMe = () => {
             />
             <About
                 showLink={false}
-                description={description}
+                showDesc = {true}
+                showExcerpt = {false}
+                showMedia = {true}
+                // description={description}
             />
         </>
     );

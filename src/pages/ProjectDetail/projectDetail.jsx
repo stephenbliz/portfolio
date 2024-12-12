@@ -1,7 +1,14 @@
 import Breadcrum from "../../components/breadcrum/breadcrum";
-import Project from "../../components/projects/Project";
+import { useEffect } from "react";
 
 const ProjectDetail = () => {
+    useEffect(()=>{
+            window.scrollTo({
+                top: '0',
+                behavior: 'smooth'
+            })
+        })
+
     return (
         <>
             <Breadcrum 

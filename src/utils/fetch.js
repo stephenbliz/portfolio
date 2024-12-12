@@ -25,7 +25,7 @@ export const getPortfolioAuthor = gql`
         portfolioAuthor(where: {slug: $slug}) {
             excerpt
             description {
-            raw
+            markdown
             }
             facebook
             linkedin
