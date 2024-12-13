@@ -1,21 +1,51 @@
 import { gql } from "@apollo/client";
 
-export const getProjects = gql`
+export const get4Projects = gql`
     query MyQuery {
-        portfolioProjects {
-            title
-            slug
+        portfolioProjects(first: 4, orderBy: createdAt_DESC) {
+            colour
+            excerpt
             id
-            previewLink
             image {
             alt
             url
             }
-            excerpt
+            title
+            slug
+        }
+    }
+`
+
+export const getAllProjects = gql`
+    query MyQuery {
+        portfolioProjects(orderBy: createdAt_DESC) {
             colour
-            description {
-            text
+            excerpt
+            id
+            image {
+            alt
+            url
             }
+            title
+            slug
+        }
+    }
+`
+
+export const getProject = gql`
+    query MyQuery($slug: String!) {
+        portfolioProject(where: {slug: $slug}) {
+            description {
+            markdown
+            }
+            image {
+            alt
+            url
+            }
+            previewLink
+            slug
+            title
+            sourceCode
         }
     }
 `

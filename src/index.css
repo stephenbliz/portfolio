@@ -2,7 +2,7 @@
 :root {
  --backgroundColor-dark: rgb(4, 4, 4);
  --backgroundColor-light: rgb(14, 14, 14);
- --color-gold: rgb(202, 133, 3);
+ --color-gold: #ca8503;
 }
 
 html{

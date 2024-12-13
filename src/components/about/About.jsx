@@ -1,8 +1,6 @@
 import style from './about.module.css';
 import {motion} from 'framer-motion';
 import { Spinner } from '@chakra-ui/react'
-import desktopPhoto from '../../assets/images/portfolioPhotoDesktop.jpg';
-import mobilePhoto from '../../assets/images/portfolioPhotoMobile.jpg';
 import { Link } from 'react-router-dom';
 import { FaArrowRightLong } from "react-icons/fa6";
 import { FaFacebookF } from "react-icons/fa";
@@ -19,12 +17,9 @@ const About = ({showLink = true, showMedia = true, showDesc = true, showExcerpt 
             variables:{slug: 'about-me'}
         })
 
-        console.log(loading, error, data?.portfolioAuthor)
-
     return (
         <section 
             className={`${style.section__about} section__margin`} 
-            // id='about'
         >
             <h1 
                 className={`${style.about__h1} heading__primary`}

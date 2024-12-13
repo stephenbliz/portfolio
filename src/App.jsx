@@ -1,9 +1,8 @@
 import Footer from "./components/footer/Footer"
 import Header from "./components/header/header"
-import {BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom'
+import {BrowserRouter as Router, Routes, Route} from 'react-router-dom'
 import AboutMe from "./pages/AboutMe/aboutMe"
 import HomePage from "./pages/Home/home"
-
 import NotFound from "./pages/NotFound/notFound"
 import Blog from "./pages/Blog/blog"
 import ProjectDetail from "./pages/ProjectDetail/projectDetail"
@@ -21,9 +20,8 @@ function App() {
           <Route path="/about-me" element={<AboutMe />} />
           <Route path="/blog" element={<Blog />} />
           <Route path="/contact" element={<ContactPage />} />
-          <Route path="/project" element={<ProjectPage />} >
-            <Route path="/project/project-detail/:slug" element={<ProjectDetail/>} />
-          </Route>
+          <Route path="/project" element={<ProjectPage />} />
+          <Route path="/project/project-detail/:slug" element={<ProjectDetail/>} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       <Footer />

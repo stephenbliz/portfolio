@@ -13,12 +13,11 @@
     justify-content: center;
     gap: 5%;
     flex-wrap: wrap;
+    text-align: center;
 }
 .skill{
     width: 30%;
     margin-bottom: 2rem;
-    text-align: center;
-    /* background-color: aqua; */
 }
 .skill__icon{
     height: 7rem;
@@ -26,6 +25,9 @@
     margin: auto;
 }
 @media screen and (max-width: 480px){
+    .skills__section{
+        padding: 0 2rem;
+    }
     .skill{
         width: 45%;
     }

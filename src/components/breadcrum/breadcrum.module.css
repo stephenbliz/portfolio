@@ -1,6 +1,7 @@
 .breadcrum__section{
     padding: 10% 0;
     margin-top: 15vh;
+    margin-bottom: 5rem;
     z-index: -1;
     background-image: linear-gradient(to right bottom, rgba(4, 3, 3, 0.85), rgba(25, 25, 25, 0.85)), url(../../assets/images/heroBackgroundDesktop.jpg);
     background-size: cover;
@@ -14,7 +15,6 @@
     border-radius: 1rem;
     text-align: center;
     text-transform: capitalize;
-    /* font-size: 3rem; */
     margin: 0 auto 0 auto ;
 }
 .breadcrum_title{
