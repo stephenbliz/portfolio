@@ -3,6 +3,8 @@ import style from './contact.module.css';
 import { LuMail } from "react-icons/lu";
 import { FaPhoneAlt } from "react-icons/fa";
 import {motion} from 'framer-motion';
+import { createMessage } from '../../utils/fetch';
+import { useMutation } from '@apollo/client';
 
 const Contact = () => {
     const [contact, setContact] = useState({
@@ -11,6 +13,13 @@ const Contact = () => {
         subject: '',
         details: ''
     });
+    const [isSuccessfull, setIsSuccessfull] = useState('');
+    const [isSubmitting, setIsSubmitting] = useState(false);
+    const [error, setError] = useState('');
+
+    const [message]= useMutation(createMessage);
+
+    
 
     const handleChange = (e)=>{
         const name = e.target.name;
@@ -18,31 +27,36 @@ const Contact = () => {
         setContact({...contact, [name]: value});
     }
 
-    const handleSubmit = (e)=>{
+    const handleSubmit = async (e)=>{
         e.preventDefault();
-        const message = {
+        setIsSubmitting(true);
+        setError('');
+        setIsSuccessfull('');
+
+        const messageObj = {
             name: contact.name,
             email: contact.email,
             subject: contact.subject,
             details: contact.details
         }
-        const colRef = collection(db, 'messages');
-
-        addDoc(colRef, message)
-            .then(()=>{
+        try{
+            await message({variables: messageObj});
             setContact({
-                name: '',
+                name : '',
                 email: '',
                 subject: '',
                 details: ''
             });
+            setIsSuccessfull('Message sent successfully!');
             setTimeout(()=>{
-                alert('Message sent');
-            }, 2000)
-        })
+                setIsSuccessfull('');
+            },3000)
+        }catch(error){
+            setError('Failed to send' || 'Something went wrong');
+        }finally{
+            setIsSubmitting(false);
+        }
     }
-
-    
 
     return (
         <section className={`${style.contact__section} section_margin`} id='contact'>
@@ -135,7 +149,28 @@ const Contact = () => {
                         name='details'
                         onChange={(e)=> handleChange(e)}
                     />
-                    <button className={style.form__button} type='submit'>Send message</button>
+                    <button 
+                        className={style.form__button} 
+                        type='submit'
+                        disabled={isSubmitting}
+                    >
+                        {isSubmitting ? 'Submitting...' : 'Send message'}
+                    </button>
+                    {isSuccessfull && 
+                        <p 
+                            className={style.successMessage}
+                        >
+                            {isSuccessfull}
+                        </p>
+                    }
+
+                    {error && 
+                        <p 
+                            className={style.errorMessage}
+                        >
+                            {error}
+                        </p>
+                    }
                     
                 </motion.form>
             </div>

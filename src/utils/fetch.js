@@ -73,3 +73,10 @@ export const getPortfolioAuthor = gql`
         }
     }
 `
+export const createMessage = gql`
+    mutation CreateMessage($name: String!, $email: String!, $subject: String!, $details: String!){
+        createPortfolioMessage(data: {name: $name,email: $email,subject: $subject,details: $details}){
+            id
+        }
+    }
+`
